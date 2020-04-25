@@ -40,9 +40,24 @@ print("Your numbers are: " + str(userNumbers))
 
 print("The winning numbers this week are: " + str(winningNumbers))
 
-# Creating conditions to compare chosen numbers to winning numbers to
-# check whether a prize has been won
-if userNumbers == winningNumbers:
+# Comparing user numbers with generated lottery numbers
+correct_guess = []
+for number in userNumbers:
+    if number in winningNumbers:
+        correct_guess.append(number)
+
+print("You guessed these numbers correctly: " + str(correct_guess))
+
+num_correct = len(correct_guess)
+if num_correct == 3:
+    print("You win £20 for matching three numbers!")
+elif num_correct == 4:
+    print("You win £40 for matching four numbers!")
+elif num_correct == 5:
+    print("You win £100 for matching five numbers!")
+elif num_correct == 6:
+    print("You win £1,000 for matching six numbers!")
+elif num_correct == 7:
     print("CONGRATULATIONS, you have just won the lottery! You have won £1,000,000!")
 else:
-    print("You have not won the lottery this week.")
+    print("Sorry, you have not won anything today.")
