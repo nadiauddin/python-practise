@@ -35,3 +35,7 @@ print("Your numbers are: " + str(userNumbers))
 
 print("The winning numbers this week are: " + str(winningNumbers))
 
+if userNumbers == winningNumbers:
+    print("CONGRATULATIONS, you have just won the lottery! You have won £1,000,000!")
+else:
+    print("You have not won the lottery this week.")
