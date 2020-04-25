@@ -1,0 +1,37 @@
+### Nadia Uddin
+### 23/04/2020
+### Session 4 homework
+
+# question 3
+
+# Write a program that simulates a lottery.
+# The program should have a list of seven numbers that represent a lottery ticket.
+# It should then generate seven random numbers.
+# After comparing the two sets of numbers, the program should output a prize based on the number of matches:
+# ● £20 for three matching numbers
+# ● £40 for four matching numbers
+# ● £100 for five matching numbers
+# ● £10000 for six matching numbers
+# ● £1000000 for seven matching numbers
+
+import random2
+
+number_range = list(range(1, 20))
+winningNumbers = random2.sample(number_range, 7)
+winningNumbers.sort()
+
+while winningNumbers in number_range:
+    winningNumbers = random2.sample(number_range)
+    number_range.append(winningNumbers)
+
+userNumbers = []
+for i in range(0, 7):
+    numbers = int(input("Please choose a number between 1 and 20: "))
+    userNumbers.append(numbers)
+
+userNumbers.sort()
+
+print("Your numbers are: " + str(userNumbers))
+
+print("The winning numbers this week are: " + str(winningNumbers))
+
