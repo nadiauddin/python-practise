@@ -18,25 +18,30 @@
 
 import random2
 
+# generating 7 random numbers between 1 and 20 in ascending order
 number_range = list(range(1, 20))
 winningNumbers = random2.sample(number_range, 7)
 winningNumbers.sort()
 
+# while loop to ensure there are no repeated numbers in the winning lottery numbers
 while winningNumbers in number_range:
     winningNumbers = random2.sample(number_range)
     number_range.append(winningNumbers)
 
+# Adding user's input to a list to finally output their chosen lottery numbers
 userNumbers = []
 for i in range(0, 7):
     numbers = int(input("Please choose a number between 1 and 20: "))
     userNumbers.append(numbers)
-
 userNumbers.sort()
 
+# Printing user's chosen numbers and the winning lottery numbers
 print("Your numbers are: " + str(userNumbers))
 
 print("The winning numbers this week are: " + str(winningNumbers))
 
+# Creating conditions to compare chosen numbers to winning numbers to
+# check whether a prize has been won
 if userNumbers == winningNumbers:
     print("CONGRATULATIONS, you have just won the lottery! You have won £1,000,000!")
 else:
