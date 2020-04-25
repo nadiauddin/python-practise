@@ -14,10 +14,12 @@
 # ● £10000 for six matching numbers
 # ● £1000000 for seven matching numbers
 
+# Own extension task: Ask the user if they would like to repeat the game
+
 import random2
 
-number_range = list(range(1, 7))
-winningNumbers = random2.sample(number_range, 6)
+number_range = list(range(1, 20))
+winningNumbers = random2.sample(number_range, 7)
 winningNumbers.sort()
 
 while winningNumbers in number_range:
@@ -25,8 +27,8 @@ while winningNumbers in number_range:
     number_range.append(winningNumbers)
 
 userNumbers = []
-for i in range(0, 6):
-    numbers = int(input("Please choose a number between 1 and 7: "))
+for i in range(0, 7):
+    numbers = int(input("Please choose a number between 1 and 20: "))
     userNumbers.append(numbers)
 
 userNumbers.sort()
