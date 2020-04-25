@@ -63,6 +63,8 @@ def game():
     else:
         print("Sorry, you have not won anything today.")
 
+game()
+
 # Asking user if they want to play again
 while True:
     play_again = input("Do you want to play again? (y/n) ")
