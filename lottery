@@ -19,6 +19,7 @@
 import random2
 
 def game():
+    """Creating a lottery game"""
 # generating 7 random numbers between 1 and 20 in ascending order
     number_range = list(range(1, 20))
     winningNumbers = random2.sample(number_range, 7)
